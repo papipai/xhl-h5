@@ -1,0 +1,356 @@
+@charset "utf-8";
+html,body{
+	width: 100%;
+	height: 100%;
+	/*background: #ef6a6c;*/
+}
+a:hover{
+	text-decoration: none;
+}
+#willesPlay{
+	/*width: 1000px;
+	height: 660px;*/
+	/*width: 1024px;
+	height: auto;*/
+	margin-top: 10px;
+	/*box-shadow: 0px 0px 15px #333333;*/
+	position: relative;
+}
+/*播放器头部*/
+#willesPlay .playHeader{
+	width: 100%;
+	height: 48px;
+	background: url(http://p8v8q53wo.bkt.clouddn.com/khj/playheader.jpg) repeat-x;
+	border-radius: 3px 3px 0px 0px;
+}
+#willesPlay .playHeader .videoName{
+	font-size: 16px;
+	width: 400px;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	margin: 0 auto;
+	color: #7a7f82;
+
+}
+#willesPlay .playContent{
+	position: relative;
+	overflow: hidden;
+	background:#000;
+	cursor: pointer;
+}
+#willesPlay .playContent .turnoff{
+	position: absolute;
+	z-index: 10;
+	right: -40px;
+	top: 50%;
+	margin-top: -90px;
+}
+#willesPlay .playContent .turnoff li a{
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+	background: rgba(0,0,0,.5);
+}
+#willesPlay .playContent .turnoff li a:hover{
+	color: #666;
+}
+#willesPlay .playContent .playTip{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	/* margin-left: -30px;
+	margin-top: -30px; */
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	font-size: 40px;
+	/*background: url(../../img/Group9.png) 0px 0px no-repeat;*/
+	/*border: 3px solid #FFFFFF;*/
+	border-radius: 50%;
+	color: #fff;
+	cursor: pointer;
+}
+#willesPlay .playControll{
+	display: block;
+	position: absolute;
+	z-index: 2147483646;
+	width: 100%;
+	height: 36px;
+	bottom: 0px;
+	/*background: url(http://p8v8q53wo.bkt.clouddn.com/khj/playheader.jpg) repeat-x;*/
+	border-radius: 0px 0px 3px 3px;
+	-moz-user-select:none;
+    -webkit-user-select:none;
+    user-select:none;   
+}
+#willesPlay .fullControll{
+	background:rgba(0,0,0,.5);
+}
+#willesPlay .fullControll .timebar span{
+	color: #FFFFFF;
+}
+#willesPlay .playControll .playPause{
+	float: left;
+	width: 20px;
+	height: 25px;
+	background: url(http://p8v8q53wo.bkt.clouddn.com/khj/pause_btn.png) 0px 0px no-repeat;
+	margin: 11px 0px 0px 10px;
+	cursor: pointer;
+}
+#willesPlay .playControll .playIcon{
+	/*background-position: 0px -32px;*/
+	background-image: url(http://p8v8q53wo.bkt.clouddn.com/khj/play_btn.png);
+	background-size:  0.8125em 1em;
+}
+/*进度条*/
+#willesPlay .playControll .timebar{
+float: left;
+width: calc(100% - 70px);
+height:100%;
+line-height: 36px;
+overflow: hidden;
+margin: 0 auto;
+/*margin: 0px 0px 0px 20px;*/
+}
+#willesPlay .playControll .timebar .progress{
+	float: left;
+	width: calc(100% - 98px);
+	margin: 17px 0px 19px 10px;
+	height: 2px;
+	cursor: pointer;
+}
+#willesPlay .playControll .timebar span{
+	float: left;
+	/*width: 50px;*/
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 0.6875em;
+}
+#willesPlay .fullscreen{
+	float: right;
+	width: 20px;
+	height: 25px;
+	background: url(http://p8v8q53wo.bkt.clouddn.com/khj/full_btn.png) 0px 0px no-repeat;
+	margin: 11px 10px 0px 10px;
+	cursor: pointer;
+}
+#willesPlay .miniscreen{
+	float: right;
+	width: 20px;
+	height: 25px;
+	background: url(http://p8v8q53wo.bkt.clouddn.com/khj/full_btn.png) 0px 0px no-repeat;
+	background-size:20px 20px;
+	margin: 11px 10px 0px 10px;
+	cursor: pointer;
+}
+.playTip{
+	background: url("http://p8v8q53wo.bkt.clouddn.com/khj/play.png") 0px 0px no-repeat;
+	position: absolute;
+	z-index:9999;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	background-position:center;
+	width:100%;
+	height:100%;
+}
+#willesPlay .otherControl span{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	vertical-align: middle;
+	font-size: 20px;
+	margin: 9px  7px;
+	/*background: url(../../img/control_01.png) no-repeat;*/
+	cursor: pointer;
+}
+#willesPlay .otherControl span:nth-child(1){
+	font-size: 1.0625em;
+	color: #FFFFFF;
+}
+/*#willesPlay .otherControl span:nth-child(2){
+	background-position: -171px 0px;
+}*/
+#willesPlay .otherControl span:nth-child(2){
+	color: #919597;
+}
+/* .drag-btn{
+	width:0.8rem;
+	height:0.8rem;
+	border-radius: 100%;
+	background: green;
+	position: relative;
+	left: 90px;
+	top:1.5rem;
+	z-index:2;
+} */
+.drag-btn{
+	width:0.8rem;
+	height:0.8rem;
+	border-radius: 100%;
+	background: green;
+	position: absolute;
+	left: -9px;
+	top: -0.3rem;
+	z-index:2;
+}
+.video-wrap .foot-pannel{width:100%;height:3rem;background-color:rgba(0,0,0,0.7);position: absolute;z-index:2147483648;left:0px;bottom:0px;display:flex;display:-webkit-flex;justify-content: center;-webkit-justify-content: center;align-items:center;-webkit-align-items:center;}
+.video-wrap .foot-pannel .oper-btn{width:1.5rem;height:1.5rem;}
+.video-wrap .foot-pannel .pause{background-image:url("http://p8v8q53wo.bkt.clouddn.com/khj/pause.png");background-size: 100%;background-repeat:no-repeat;background-position: center;}
+.video-wrap .foot-pannel .play{background-image:url("http://p8v8q53wo.bkt.clouddn.com/khj/start.png");background-size: 100%;background-repeat:no-repeat;background-position: center;}
+.video-wrap .foot-pannel .drag-wrap{width:80%;height:100%;position: relative;z-index:1;align-items:center;-webkit-align-items:center;}
+.video-wrap .foot-pannel .drag-wrap .drag-line{width:70%;height:0.2rem;background:#ffffff;margin:0 auto;margin-top:1.4rem;border-radius: 1rem;position: relative;z-index:1;float: right;}
+.video-wrap .foot-pannel .drag-wrap .drag-line .drag-btn{width:1rem;height:1rem;background: green;position: absolute;z-index:1;left:0px;top:-0.3rem;border-radius: 100%;}
+.video-wrap .foot-pannel .drag-wrap .drag-line .drag-line-bg{width:0px;height:100%;position: absolute;z-index:1;left:0px;top:0px;background:#FF0000;}
+.video-wrap .foot-pannel .full-btn{width:2rem;height:2rem;background-image:url("http://p8v8q53wo.bkt.clouddn.com/khj/full.png");background-size:100%;background-repeat: no-repeat;background-position: center;}
+.video-wrap .foot-pannel .unfull-btn{width:2rem;height:2rem;background-image:url("http://p8v8q53wo.bkt.clouddn.com/khj/unfull.png");background-size:100%;background-repeat: no-repeat;background-position: center;}
+.video-wrap .foot-pannel .video-time{width:auto;height:auto;position: absolute;z-index:1;left:0px;top:0.9rem;font-size:0.6rem;color:#FFFFFF;float:left;}
+
+/*音量*/
+#willesPlay .otherControl .volumeBar{
+	display: none;
+	position: absolute;
+	top: -110px;
+	left:4px;
+	width: 26px;
+	height: 100px;
+	background:#f1f2f2;
+	border-radius: 4px;
+	cursor: pointer;
+}
+#willesPlay .otherControl .volumeBar:after{
+	content:"";
+	display: block;
+	position:absolute;
+	bottom: -7px;
+	left: 5px;
+	width: 0;
+    height: 0;
+    border-left:8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #f1f2f2;
+}
+#willesPlay .otherControl .volumeBar .volumewrap{
+	background: #a2a7aa;
+	width: 8px;
+	height: 80px;
+	position: absolute;
+	bottom: 10px;
+	left: 9px;
+	border-radius: 4px;
+}
+
+#willesPlay .otherControl .volumeBar .progress{
+	background: none;
+}
+#willesPlay .otherControl .volumeBar .progress-bar{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	border-radius: 4px;
+}
+video::-webkit-media-controls-enclosure {
+    /*禁用播放器控制栏的样式*/
+    display: none !important;
+}
+:-webkit-full-screen{}
+
+/*其他样式*/
+#title{
+	font-family: "微软雅黑";
+	font-size: 21px;
+	font-weight: bold;
+	color: #333333;
+	letter-spacing: 0;
+	margin-top: 13.3px;
+}
+#time{
+	opacity: 0.54;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #333333;
+	letter-spacing: 0;
+	margin-top: 5.3px;
+}
+#more{
+	opacity: 0.88;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #333333;
+	letter-spacing: 0;
+	margin-top: 23px;
+}
+ul li{
+	list-style: none;
+	border: 0px solid blue;
+	width: 100%;
+	margin: 10px 0px;
+}
+.video{
+	margin: 0px -15px;
+}
+.pic_list{
+	width: 33.33%;
+	border: 0px solid red;
+}
+.title_list{
+	width: 66.67%;
+	opacity: 0.87;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	font-size: 17px;
+	color: #000000;
+	text-align: left;
+}
+table{
+	width: 100%;
+	/*border: 0px solid red;*/
+}
+ul li table tr img{
+	width: 100%;
+	height:67px;
+}
+ul li table tr a{
+	color: #000000;
+	display: block;
+	margin-left: 10px;
+}
+
+.code{
+	background:#ffffff;
+	position:fixed;
+	bottom:0;
+	left:0;
+	padding:10px 0;
+	z-index:2;
+	border: 0px solid blue;
+}
+#video_list2{
+	margin-bottom: 123px;
+}
+.code img{
+	width: 68.85%;
+	display: block;
+    float: left;
+    margin-left: 35px;
+}
+.code span{
+	margin-left: 19px;
+	font-family: "微软雅黑";
+	font-size: 1.3125em;
+	color: #333333;
+	letter-spacing: 0;
+}
+//二维码背景遮罩
+

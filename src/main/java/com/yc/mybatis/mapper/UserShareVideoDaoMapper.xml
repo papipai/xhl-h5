@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.yc.mybatis.mapper.UserShareVideoDao">  
+	 <!--查询 -->
+    <select id="getUserShareVideo" resultType="String" parameterType="UserShareVideo">
+        select * from video_share where open_id = #{open_id} and video_id = #{video_id};
+    </select>
+    <!--新增 -->
+    <insert id="addUserShareVideo" parameterType="UserShareVideo">
+        insert into video_share(open_id,video_id,share_time) values(#{open_id},#{video_id},#{share_time});
+    </insert>
+</mapper>  
